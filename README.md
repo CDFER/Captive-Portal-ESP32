@@ -1,5 +1,6 @@
 # ESP Cross Platform Captive Portal
-A ESP32 Captive Portal that actually works on all devices (or that is the goal).
+A ESP32 Captive Portal example that actually works on all devices (or that is the goal).
+When you connect to the wifi "captive" is should take you straight to http://4.3.2.1/ and show the text "Hooray"
 
 
 I need you help! If you test this code on a device (even if it works)
