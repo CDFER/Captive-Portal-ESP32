@@ -12,4 +12,4 @@ A list of all tested devices can be seen here: https://docs.google.com/spreadshe
 Known Limitations at the moment:
 ---------------
 - Firefox gives a warning page about going to a non-https page
-- Oneplus 6 (Oxygen OS 11) sometimes doesn't connect of first try but does on the second
+- Oneplus 6 (Oxygen OS 11) gets stuck on setting client side IP address sometimes when cellular is on
