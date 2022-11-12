@@ -1,4 +1,4 @@
-# Captive-Test
+# ESP Cross Platform Captive Portal
 A ESP32 Captive Portal that actually works on all devices.
 
 
