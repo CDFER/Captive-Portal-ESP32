@@ -12,3 +12,8 @@ A list of all tested devices can be seen here: https://docs.google.com/spreadshe
 
 - Oneplus 6 phone (Oxygen OS 11) sometimes gets stuck on setting client side IP address when cellular is on
 - V0.1 has multiple bugs and is now considered EOL
+
+
+### Future Dev Options to look into (Help or suggestions are apreciated):
+- Set client DHCP IP address range in private space (currenly clients much accept to use 4.3.2.2 as thier ip)
+- Support integrating the DHCP or IPv6 Router Advertisement (RA) options for Captive Portals on iOS 14+ and macOS Big Sur+ https://developer.apple.com/news/?id=q78sq5rv
