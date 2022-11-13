@@ -11,3 +11,4 @@ A list of all tested devices can be seen here: https://docs.google.com/spreadshe
 ## Known Bugs at the moment
 
 - Oneplus 6 phone (Oxygen OS 11) sometimes gets stuck on setting client side IP address when cellular is on
+- V0.1 has multiple bugs and is now considered EOL
