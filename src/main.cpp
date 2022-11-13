@@ -72,7 +72,7 @@ void setup(){ //the order of the code is really important and it is critical the
     AsyncWebServerResponse *response = request->beginResponse(200, "text/html", "<!DOCTYPE html><html><head><title>Success</title></head><body><p>Hooray</p></body>");
     response->addHeader("Cache-Control", "public,max-age=31536000");
     request->send(response);
-    DEBUG_SERIAL.println("Served Basic HTML Page with 7 day Cache header");
+    DEBUG_SERIAL.println("Served Basic HTML Page with 1 year Cache header");
   });
 
   server.onNotFound([](AsyncWebServerRequest *request){
