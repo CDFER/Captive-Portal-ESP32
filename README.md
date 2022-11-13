@@ -11,7 +11,10 @@ A list of all tested devices can be seen here: https://docs.google.com/spreadshe
 ## Known Bugs at the moment
 
 - Oneplus 6 phone (Oxygen OS 11) sometimes gets stuck on setting client side IP address when cellular is on
-- V0.1 has multiple bugs and is now considered EOL
+
+
+### Further testing requierd
+- If you have a lot of tabs open in Windows 11 (and probabilly other desktop OS) it increases the load on the ESP32 DNS server.
 
 
 ### Future Dev Options to look into (Help or suggestions are apreciated):
