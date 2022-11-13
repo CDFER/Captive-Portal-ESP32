@@ -10,4 +10,13 @@ A list of all tested devices can be seen here: https://docs.google.com/spreadshe
 
 ## Known Bugs at the moment
 
-- Oneplus 6 phone (Oxygen OS 11) gets stuck on setting client side IP address sometimes when cellular is on
+- Oneplus 6 phone (Oxygen OS 11) sometimes gets stuck on setting client side IP address when cellular is on
+
+
+### Further testing requierd
+- If you have a lot of tabs open in Windows 11 (and probabilly other desktop OS) it increases the load on the ESP32 DNS server.
+
+
+### Future Dev Options to look into (Help or suggestions are apreciated):
+- Set client DHCP IP address range in private space (currenly clients much accept to use 4.3.2.2 as thier ip)
+- Support integrating the DHCP or IPv6 Router Advertisement (RA) options for Captive Portals on iOS 14+ and macOS Big Sur+ https://developer.apple.com/news/?id=q78sq5rv
