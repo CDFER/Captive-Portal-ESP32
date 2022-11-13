@@ -1,9 +1,12 @@
 #include <Arduino.h>
 #include <DNSServer.h>
-#include <esp_wifi.h> //Used for android work around
+#include <esp_wifi.h> //Used for mpdu_rx_disable android workaround
 #include <WiFi.h>
 #include <AsyncTCP.h> 	//https://github.com/me-no-dev/AsyncTCP using the latest dev version from @me-no-dev
-#include "ESPAsyncWebServer.h" //ESP Async WebServer using the latest stable version from @me-no-dev
+#include <ESPAsyncWebServer.h> //ESP Async WebServer using the latest stable version from @me-no-dev
+
+#define DEBUG_SERIAL if(USE_SERIAL)Serial //don't touch, enable serial in platformio.ini
+
 
 // Dependency Graph
 // |-- AsyncTCP @ 1.1.1+sha.ca8ac5f
@@ -21,11 +24,15 @@ DNSServer dnsServer;
 AsyncWebServer server(80);
 
 void setup(){ //the order of the code is really important and it is critical the the android workaround is after the dns and sofAP setup
+
+  #if USE_SERIAL == true
   Serial.begin(115200);
-  Serial.print("\n");
+  while (!Serial);
+  Serial.println("\n\nCaptive Test, compiled " __DATE__ " " __TIME__ "by CD_FER");
+  #endif
 
   WiFi.mode(WIFI_AP);
-  WiFi.softAPConfig(IPAddress(4, 3, 2, 1), IPAddress(4, 3, 2, 1), IPAddress(255, 255, 255, 0)); //Samusung requires the IP to be in public space
+  WiFi.softAPConfig(IPAddress(4, 3, 2, 1), IPAddress(4, 3, 2, 1), IPAddress(255, 255, 255, 0)); //Samsung requires the IP to be in public space
   WiFi.softAP("captive", "12345678", 6, 0, 4); //2.4ghz channel 6, do broadcast SSID (0), 4 max clients, FYI The SSID in SoftAP can't have a space in it.
   
   dnsServer.setErrorReplyCode(DNSReplyCode::NoError); //not sure if this is necessary
@@ -65,24 +72,23 @@ void setup(){ //the order of the code is really important and it is critical the
     AsyncWebServerResponse *response = request->beginResponse(200, "text/html", "<!DOCTYPE html><html><head><title>Success</title></head><body><p>Hooray</p></body>");
     response->addHeader("Cache-Control", "public,max-age=31536000");
     request->send(response);
-    Serial.println("Served Basic HTML Page with 7 day Cache header");
+    DEBUG_SERIAL.println("Served Basic HTML Page with 7 day Cache header");
   });
 
   server.onNotFound([](AsyncWebServerRequest *request){
     request->redirect("http://4.3.2.1/");
-    Serial.print("server.onnotfound ");
-    Serial.print(request->host());       //This gives some insight into whatever was being requested on the serial monitor
-    Serial.print(request->url());
-    Serial.print(" sent redirect to http://4.3.2.1/\n");
+    DEBUG_SERIAL.print("server.onnotfound ");
+    DEBUG_SERIAL.print(request->host());       //This gives some insight into whatever was being requested on the serial monitor
+    DEBUG_SERIAL.print(request->url());
+    DEBUG_SERIAL.print(" sent redirect to http://4.3.2.1/\n");
   });
 
   server.begin();
 
-
-  Serial.print("\n");
-  Serial.print("Startup Time:"); //should be somewhere between 300-350 for ESP32 D0WDQ6 chip
-  Serial.println(millis());
-  Serial.print("\n");
+  DEBUG_SERIAL.print("\n");
+  DEBUG_SERIAL.print("Startup Time:"); //should be somewhere between 270-350 for ESP32 D0WDQ6 chip (can be higher on first boot)
+  DEBUG_SERIAL.println(millis());
+  DEBUG_SERIAL.print("\n");
 }
 
 void loop(){
