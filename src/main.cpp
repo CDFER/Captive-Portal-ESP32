@@ -37,8 +37,8 @@ void setup(){ //the order of the code is really important and it is critical the
   
   dnsServer.setErrorReplyCode(DNSReplyCode::NoError); //not sure if this is necessary
   dnsServer.setTTL(300); //set 5min client side cache for DNS
+  // if DNSServer is started with "*" for domain name, it will reply with provided IP to all DNS request
   dnsServer.start(53, "*", WiFi.softAPIP());
-
 
   //ampdu_rx_disable android workaround see https://github.com/espressif/arduino-esp32/issues/4423
   esp_wifi_stop();
@@ -67,9 +67,10 @@ void setup(){ //the order of the code is really important and it is critical the
   //return 404 to webpage icon
   server.on("/favicon.ico",[](AsyncWebServerRequest *request){request->send(404);}); //webpage icon
 
-  //Serve Basic HTML Page
+  //Serve Basic HTML Page WARNING IOS (and maybe macos) WILL NOT POP UP IF THIS PAGE CONTAINS THE WORD "Success" https://www.esp8266.com/viewtopic.php?f=34&t=4398
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request){
-    AsyncWebServerResponse *response = request->beginResponse(200, "text/html", "<!DOCTYPE html><html><head><title>Success</title></head><body><p>Hooray</p></body>");
+    AsyncWebServerResponse *response = request->beginResponse(200, "text/html", "<!DOCTYPE html><html><head><title>ESP32 Captive Portal</title></head><body><p>This is a captive portal example. All requests will "
+  "be redirected here.</p></body>");
     response->addHeader("Cache-Control", "public,max-age=31536000");
     request->send(response);
     DEBUG_SERIAL.println("Served Basic HTML Page with 1 year Cache header");
@@ -86,7 +87,7 @@ void setup(){ //the order of the code is really important and it is critical the
   server.begin();
 
   DEBUG_SERIAL.print("\n");
-  DEBUG_SERIAL.print("Startup Time:"); //should be somewhere between 270-350 for ESP32 D0WDQ6 chip (can be higher on first boot)
+  DEBUG_SERIAL.print("Startup Time:"); //should be somewhere between 270-350 for Generic ESP32 (D0WDQ6 chip, can have a higher startup time on first boot)
   DEBUG_SERIAL.println(millis());
   DEBUG_SERIAL.print("\n");
 }
