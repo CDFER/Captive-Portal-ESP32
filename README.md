@@ -2,7 +2,7 @@
 
 A ESP32 Captive Portal example that works on all devices (or that's the goal).
 
-When you connect to the wifi "captive" password "12345678" it should take you straight to http://4.3.2.1/ and show the text "Hooray"
+When you connect to the wifi "captive" password "12345678" it should take you straight to http://4.3.2.1/ and display some simple text.
 
 | Status | Issue    | Version | Device Name             | Browser | OS                      |
 |--------|----------|---------|-------------------------|---------|-------------------------|
