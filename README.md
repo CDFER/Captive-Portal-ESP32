@@ -30,7 +30,7 @@ If you test this code on a device (even if it works) it would be really helpful 
 
 
 
-## Known Bugs at the moment
+## Known Bugs with current version
 - Oneplus 6 phone (Oxygen OS 11) sometimes gets stuck on setting client side IP address when cellular is on
 
 
