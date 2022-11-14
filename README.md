@@ -37,6 +37,8 @@ If you test this code on a device (even if it works) it would be really helpful 
 ### Further testing required
 - If you have a lot of tabs open in Windows 11 (and probably other desktop OS) it increases the load on the ESP32 DNS server.
 - HTML Webpage being served multiple times
+- Other ESP32 chip variants (all testing so far is on the ESP32 D0WDQ6 chip in the ESP32S module)
+- Test increasing the max clients connected up from 4 to max supported 10
 
 
 ### Future Dev Options to look into (Help or suggestions are appreciated):
