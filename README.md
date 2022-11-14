@@ -31,12 +31,12 @@ If you test this code on a device (even if it works) it would be really helpful 
 
 
 ## Known Bugs at the moment
-
 - Oneplus 6 phone (Oxygen OS 11) sometimes gets stuck on setting client side IP address when cellular is on
 
 
 ### Further testing required
 - If you have a lot of tabs open in Windows 11 (and probably other desktop OS) it increases the load on the ESP32 DNS server.
+- HTML Webpage being served multiple times
 
 
 ### Future Dev Options to look into (Help or suggestions are appreciated):
