@@ -7,20 +7,14 @@ When you connect to the wifi "captive" password "12345678" it should take you st
 |--------|---------|--------------------------------------|---------------------------|---------------------------|
 |    ✅   | V0.2.0  | Iphone 11                            | Default Captive (safari?) |                           |
 |    ✅   | V0.2.0  | XPS15 9550                           | Firefox                   | Win 11 Home               |
+|    ✅   | V0.2.0  | XPS15 9550                           | Chrome                    | Win 11 Home               |
 |    ✅   | V0.2.0  | Samsung A53 0F 32GB (Spark Carrier)  | Default Captive (chrome?) | Android 9 (oneui 1)       |
-|    ✅   | V0.1    | Samsung A53 0F 32GB (Spark Carrier)  | Default Captive (chrome?) | Android 9 (oneui 1)       |
-|    🤷   | V0.1    | Onplus 6 (A6000) on Skinny NZ        | Default Captive (chrome?) | Android 11 (oxygen os 11) |
+|    🤷   | V0.2.0  | Onplus 6 (A6000) on Skinny NZ        | Default Captive (chrome?) | Android 11 (oxygen os 11) |
 |    ✅   | V0.1    | XPS15 9575 (2 in 1)                  | Edge                      | Win 10 Pro                |
-|    ✅   | V0.1    | XPS15 9550                           | Firefox                   | Win 11 Home               |
-|    ✅   | V0.1    | XPS15 9550                           | Chrome                    | Win 11 Home               |
 |    ✅   | V0.1    | XPS15 9570                           | Edge                      | Win 10 Edu                |
 |    ✅   | V0.1    | Samsung S20 FE 5G                    | Default Captive (chrome?) | Android 12 (one UI 4.1)   |
 |    ❌   | V0.1    | Macbook Pro 16inch 2019              | Chrome                    | MacOS Monterey (12.5.1)   |
 |    ❌   | V0.1    | Macbook Pro 16inch 2019              | Safari                    | MacOS Monterey (12.5.1)   |
-|    ✅   | V0.1    | XPS15 9550                           | Firefox                   | Win 11 Home               |
-|    ✅   | V0.1    | XPS15 9550                           | Firefox                   | Win 11 Home               |
-
-A list of all tested devices can be seen here: https://docs.google.com/spreadsheets/d/1588-0fG21-aaR2pWJNQjufwgPaIDbHX_0geHEn1yDHk/edit?usp=sharing
 
 ## Quickstart with ESP Home Flasher tool on Windows, MacOS and Linux
 
