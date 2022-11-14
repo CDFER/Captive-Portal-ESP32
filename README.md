@@ -42,7 +42,7 @@ If you test this code on a device (even if it works) it would be really helpful 
 
 
 ### Future Dev Options to look into (Help or suggestions are appreciated):
-- Set client DHCP IP address range in private space (currently clients much accept to use 4.3.2.2 as their ip)
+- Set client DHCP IP address range in private space (currently clients must accept DHCP Server Range: 4.3.2.2 to 4.3.2.12)
 - Support integrating the DHCP or IPv6 Router Advertisement (RA) options for Captive Portals on iOS 14+ and macOS Big Sur+ https://developer.apple.com/news/?id=q78sq5rv
 - Port https://github.com/Aircoookie/WLED-WebInstaller
 
