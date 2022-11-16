@@ -14,8 +14,6 @@ When you connect to the wifi "captive" password "12345678" it should take you st
 | ✅      |          | V0.1    | XPS15 9575              | Edge    | Win 10 Pro              |
 | ✅      |          | V0.1    | XPS15 9570              | Edge    | Win 10 Edu              |
 | ✅      |          | V0.1    | Samsung S20 FE 5G       | Default | Android 12 (OneUI4.1)   |
-| ❌      | No Popup | V0.1    | Macbook Pro 16inch 2019 | Chrome  | MacOS Monterey (12.5.1) |
-| ❌      | No Popup | V0.1    | Macbook Pro 16inch 2019 | Safari  | MacOS Monterey (12.5.1) |
 
 
 ## Quickstart with ESP Home Flasher tool on Windows, MacOS and Linux
