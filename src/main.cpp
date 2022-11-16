@@ -1,12 +1,10 @@
 #include <Arduino.h>
 #include <DNSServer.h>
 #include <esp_wifi.h> //Used for mpdu_rx_disable android workaround
-#include <WiFi.h>
 #include <AsyncTCP.h> 	//https://github.com/me-no-dev/AsyncTCP using the latest dev version from @me-no-dev
 #include <ESPAsyncWebServer.h> //ESP Async WebServer using the latest stable version from @me-no-dev
 
 #define DEBUG_SERIAL if(USE_SERIAL)Serial //don't touch, enable serial in platformio.ini
-
 
 // Dependency Graph
 // |-- AsyncTCP @ 1.1.1+sha.ca8ac5f
@@ -16,14 +14,13 @@
 // |   |-- WiFi @ 2.0.0
 // |-- DNSServer @ 2.0.0
 // |   |-- WiFi @ 2.0.0
-// |-- WiFi @ 2.0.0
 
 //Pre reading on the fundamentals of captive portals https://textslashplain.com/2022/06/24/captive-portals/
 
 DNSServer dnsServer;
 AsyncWebServer server(80);
 
-void setup(){ //the order of the code is really important and it is critical the the android workaround is after the dns and sofAP setup
+void setup(){ //the order of the code is important and it is critical the the android workaround is after the dns and sofAP setup
 
   #if USE_SERIAL == true
   Serial.begin(115200);
@@ -37,8 +34,7 @@ void setup(){ //the order of the code is really important and it is critical the
   
   dnsServer.setErrorReplyCode(DNSReplyCode::NoError); //not sure if this is necessary
   dnsServer.setTTL(300); //set 5min client side cache for DNS
-  // if DNSServer is started with "*" for domain name, it will reply with provided IP to all DNS request
-  dnsServer.start(53, "*", WiFi.softAPIP());
+  dnsServer.start(53, "*", WiFi.softAPIP()); //if DNSServer is started with "*" for domain name, it will reply with provided IP to all DNS request
 
   //ampdu_rx_disable android workaround see https://github.com/espressif/arduino-esp32/issues/4423
   esp_wifi_stop();
