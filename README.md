@@ -45,8 +45,9 @@ If you test this code on a device (even if it works) it would be really helpful 
 - Other ESP32 chip variants (all testing so far is on the ESP32 D0WDQ6 chip in the ESP32S module)
 - Test increasing the max clients connected up from 4 to max supported 10
 
-### Future Dev Options to look into (Help or suggestions are appreciated):
+### Future features that I'm looking to try and add (Help or suggestions are appreciated):
 
+- add CORS for a REST API compatability https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors.html
 - Set client DHCP IP address range in private space (currently clients must accept DHCP Server Range: 4.3.2.2 to 4.3.2.12)
 - Support integrating the DHCP or IPv6 Router Advertisement (RA) options for Captive Portals on iOS 14+ and macOS Big Sur+ https://developer.apple.com/news/?id=q78sq5rv
 - Port https://github.com/Aircoookie/WLED-WebInstaller
@@ -60,4 +61,6 @@ If you test this code on a device (even if it works) it would be really helpful 
 - Download the source code by executing git clone https://github.com/CDFER/Captive-Portal-ESP32.git. in some folder.
 - In VS Code Go to File -> Open Folder and open that root folder (the one that contains platformio.ini, NOT the src folder)
 - Upload to the esp32 using the right arrow button in the bottom left corner of vs code
+
+Made with love by Chris Dirks (@cd_fer) in Aotearoa New Zealand
 
