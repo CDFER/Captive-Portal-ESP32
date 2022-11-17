@@ -42,10 +42,22 @@ If you test this code on a device (even if it works) it would be really helpful 
 
 - If you have a lot of tabs open in Windows 11 (and probably other OS) it increases the load on the ESP32 DNS server.
 - HTML Webpage being served multiple times
+- Other ESP32 chip variants (all testing so far is on the ESP32 D0WDQ6 chip in the ESP32S module)
+- Test increasing the max clients connected up from 4 to max supported 10
 
-### Future Dev Options to look into (Help or suggestions are appreciated)
+### Future Dev Options to look into (Help or suggestions are appreciated):
 
-- Set client DHCP IP address range in private space (currently clients much accept to use 4.3.2.2 as their ip)
-- Support integrating the DHCP or IPv6 Router Advertisement (RA) options for Captive Portals on iOS 14+ and macOS Big Sur+ <https://developer.apple.com/news/?id=q78sq5rv>
-- Port <https://github.com/Aircoookie/WLED-WebInstaller>
--Support IPv6.
+- Set client DHCP IP address range in private space (currently clients must accept DHCP Server Range: 4.3.2.2 to 4.3.2.12)
+- Support integrating the DHCP or IPv6 Router Advertisement (RA) options for Captive Portals on iOS 14+ and macOS Big Sur+ https://developer.apple.com/news/?id=q78sq5rv
+- Port https://github.com/Aircoookie/WLED-WebInstaller
+
+### Compile yourself using PlatformIO highly recommended
+
+- Make sure Git client is installed on your system.
+- Download and install Visual Studio Code by Microsoft.
+- Open VS Code and go to the Extensions manager (the icon with the stacked blocks in the left bar)
+- Search for platformio ide and install the PlatformIO extension
+- Download the source code by executing git clone https://github.com/CDFER/Captive-Portal-ESP32.git. in some folder.
+- In VS Code Go to File -> Open Folder and open that root folder (the one that contains platformio.ini, NOT the src folder)
+- Upload to the esp32 using the right arrow button in the bottom left corner of vs code
+
