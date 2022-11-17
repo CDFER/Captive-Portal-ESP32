@@ -1,4 +1,4 @@
-# ESP32 Cross Platform Captive Portal Example
+# ESP32 Cross Platform Captive Portal Example (Arduino C++)
 
 A ESP32 Captive Portal (think airport wifi sign in page) example that works on all devices (or that's the goal).
 
@@ -51,7 +51,7 @@ If you test this code on a device (even if it works) it would be really helpful 
 - Support integrating the DHCP or IPv6 Router Advertisement (RA) options for Captive Portals on iOS 14+ and macOS Big Sur+ https://developer.apple.com/news/?id=q78sq5rv
 - Port https://github.com/Aircoookie/WLED-WebInstaller
 
-### Compile yourself using PlatformIO highly recommended
+### Compile yourself using PlatformIO
 
 - Make sure Git client is installed on your system.
 - Download and install Visual Studio Code by Microsoft.
