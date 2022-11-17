@@ -1,4 +1,5 @@
-# ESP32 Cross Platform Captive Portal Example (Arduino C++)
+# ESP32 Cross Platform Captive Portal Example 
+## Built using Platformio and the Arduino C++ core
 
 A ESP32 Captive Portal (think airport wifi sign in page) example that works on all devices (or that's the goal).
 
