@@ -4,6 +4,32 @@ A ESP32 Captive Portal (think airport wifi sign in page) example that works on a
 
 When you connect to the wifi "captive" password "12345678" it should take you straight to <http://4.3.2.1/> and display a green page with some simple text.
 
+## Features
+
+RAM:   [=         ]  11.6% (used 37976 bytes from 327680 bytes)
+Flash: [==        ]  22.6% (used 711089 bytes from 3145728 bytes)
+* Using the releae enviroment (no Serial or debug messages)
+~100ms reload time using modern systems
+Lots of comments that explain how it works
+
+## Quickstart with ESP Home Flasher tool on Windows, MacOS and Linux
+
+This is a simple GUI-based tool that can be downloaded from here: <https://github.com/esphome/esphome-flasher/releases/>
+
+If running Windows, you will most likely need a driver from here: <https://www.wemos.cc/en/latest/ch340_driver.html> before your computer will show the COM port in ESPhome Flasher.
+
+### Compile yourself using PlatformIO
+
+- Make sure Git client is installed on your system.
+- Download and install Visual Studio Code by Microsoft.
+- Open VS Code and go to the Extensions manager (the icon with the stacked blocks in the left bar)
+- Search for platformio ide and install the PlatformIO extension
+- Download the source code by executing git clone https://github.com/CDFER/Captive-Portal-ESP32.git. in some folder.
+- In VS Code Go to File -> Open Folder and open that root folder (the one that contains platformio.ini, NOT the src folder)
+- Upload to the esp32 using the right arrow button in the bottom left corner of vs code
+
+
+
 | Status | Version   | Connect | Popup | Serve Page | OS                      | Device Name         | Browser | Notes                |
 |--------|-----------|---------|-------|------------|-------------------------|---------------------|---------|----------------------|
 | ✅      | V0.3.0    | ✅       | ✅     | ✅          | Win 11 Home (22H2)      | XPS15 9550          | Firefox |                      |
@@ -22,14 +48,7 @@ When you connect to the wifi "captive" password "12345678" it should take you st
 | ✅      | V0.1      | ✅       | ✅     | ✅          | Win 10 Pro              | XPS15 9575          | Edge    |                      |
 | ✅      | V0.1      | ✅       | ✅     | ✅          | Win 10 Edu              | XPS15 9570          | Edge    |                      |
 | ✅      | V0.1      | ✅       | ✅     | ✅          | Android 12 (OneUI4.1)   | Samsung S20 FE 5G   | Default |                      |
-
-## Quickstart with ESP Home Flasher tool on Windows, MacOS and Linux
-
-This is a simple GUI-based tool that can be downloaded from here: <https://github.com/esphome/esphome-flasher/releases/>
-
-If running Windows, you will most likely need a driver from here: <https://www.wemos.cc/en/latest/ch340_driver.html> before your computer will show the COM port in ESPhome Flasher.
-
-## Did it work?
+### Did it work?
 
 If you test this code on a device (even if it works) it would be really helpful if you fill out the form here: <https://forms.gle/ArLPTnwRA3QGTKyc6>
 
@@ -52,14 +71,4 @@ If you test this code on a device (even if it works) it would be really helpful 
 - Set client DHCP IP address range in private space (currently clients must accept DHCP Server Range: 4.3.2.2 to 4.3.2.12)
 - Support integrating the DHCP or IPv6 Router Advertisement (RA) options for Captive Portals on iOS 14+ and macOS Big Sur+ https://developer.apple.com/news/?id=q78sq5rv
 - Port https://github.com/Aircoookie/WLED-WebInstaller
-
-### Compile yourself using PlatformIO
-
-- Make sure Git client is installed on your system.
-- Download and install Visual Studio Code by Microsoft.
-- Open VS Code and go to the Extensions manager (the icon with the stacked blocks in the left bar)
-- Search for platformio ide and install the PlatformIO extension
-- Download the source code by executing git clone https://github.com/CDFER/Captive-Portal-ESP32.git. in some folder.
-- In VS Code Go to File -> Open Folder and open that root folder (the one that contains platformio.ini, NOT the src folder)
-- Upload to the esp32 using the right arrow button in the bottom left corner of vs code
 
