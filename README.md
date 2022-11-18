@@ -14,6 +14,8 @@ When you connect to the wifi "captive" password "12345678" it should take you st
 | ✅      | V0.3.0    | ✅       | ✅     | ✅          | iOS 9 (9.3.5)           | iPad mini (2012)    | Default |                      |
 | ✅      | V0.3.0    | ✅       | ✅     | ✅          | Android 9 (OneUI1)      | Samsung A53         | Default |                      |
 | ✅      | V0.3.0    | ✅       | ✅     | ✅          | iOS 10 (10.3.3)         | iPhone 5c           | Default |                      |
+| ✅      | V0.2.0    | ✅       | ✅     | ✅          |                         | iPhone X            | Default | thx @SNERTTT         |
+| ✅      | V0.2.0    | ✅       | ✅     | ✅          |                         | Redmi Note 10       | Default | thx @SNERTTT         |
 | ✅      | V0.2.0    | ✅       | ✅     | ✅          | iOS 16                  | iPhone XR           | Default |                      |
 | ❌      | V0.2.0    | ✅       | ❌     | ✅          | MacOS Monterey (12.5.1) | Macbook Pro 16 2019 | Chrome  |                      |
 | ❌      | V0.2.0    | ✅       | ❌     | ✅          | MacOS Monterey (12.5.1) | Macbook Pro 16 2019 | Safari  |                      |
