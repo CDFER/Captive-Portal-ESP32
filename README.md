@@ -1,7 +1,7 @@
 # ESP32 Cross Platform Captive Portal Example 
 ## Built using Platformio and the Arduino C++ core
-
-A ESP32 Captive Portal (think airport wifi sign in page) example that works on all devices (or that's the goal).
+[![Hippocratic License HL3-CL-EXTR-FFD-MEDIA-MIL-MY-SV-TAL](https://img.shields.io/static/v1?label=Hippocratic%20License&message=HL3-CL-EXTR-FFD-MEDIA-MIL-MY-SV-TAL&labelColor=5e2751&color=bc8c3d)](https://firstdonoharm.dev/version/3/0/cl-extr-ffd-media-mil-my-sv-tal.html)
+ ESP32 Captive Portal (think airport wifi sign in page) example that works on all devices (or that's the goal).
 
 When you connect to the wifi "captive" password "12345678" it should take you straight to <http://4.3.2.1/> and display a green page with some simple text.
 
@@ -15,6 +15,8 @@ When you connect to the wifi "captive" password "12345678" it should take you st
 | ✅      | V0.3.0    | ✅       | ✅     | ✅          | iOS 9 (9.3.5)           | iPad mini (2012)    | Default |                      |
 | ✅      | V0.3.0    | ✅       | ✅     | ✅          | Android 9 (OneUI1)      | Samsung A53         | Default |                      |
 | ✅      | V0.3.0    | ✅       | ✅     | ✅          | iOS 10 (10.3.3)         | iPhone 5c           | Default |                      |
+| ✅      | V0.2.0    | ✅       | ✅     | ✅          |                         | iPhone X            | Default | thx @SNERTTT         |
+| ✅      | V0.2.0    | ✅       | ✅     | ✅          |                         | Redmi Note 10       | Default | thx @SNERTTT         |
 | ✅      | V0.2.0    | ✅       | ✅     | ✅          | iOS 16                  | iPhone XR           | Default |                      |
 | ❌      | V0.2.0    | ✅       | ❌     | ✅          | MacOS Monterey (12.5.1) | Macbook Pro 16 2019 | Chrome  |                      |
 | ❌      | V0.2.0    | ✅       | ❌     | ✅          | MacOS Monterey (12.5.1) | Macbook Pro 16 2019 | Safari  |                      |
@@ -46,9 +48,8 @@ If you test this code on a device (even if it works) it would be really helpful 
 - Other ESP32 chip variants (all testing so far is on the ESP32 D0WDQ6 chip in the ESP32S module)
 - Test increasing the max clients connected up from 4 to max supported 10
 
-### Future features that I'm looking to try and add (Help or suggestions are appreciated):
+### Future Dev Options to look into (Help or suggestions are appreciated):
 
-- add CORS for a REST API compatability https://docs.aws.amazon.com/apigateway/latest/developerguide/how-to-cors.html
 - Set client DHCP IP address range in private space (currently clients must accept DHCP Server Range: 4.3.2.2 to 4.3.2.12)
 - Support integrating the DHCP or IPv6 Router Advertisement (RA) options for Captive Portals on iOS 14+ and macOS Big Sur+ https://developer.apple.com/news/?id=q78sq5rv
 - Port https://github.com/Aircoookie/WLED-WebInstaller
