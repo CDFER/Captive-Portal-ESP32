@@ -1,7 +1,9 @@
 # ESP32 Cross Platform Captive Portal Example 
 ## Built using Platformio and the Arduino C++ core
+
 [![Hippocratic License HL3-CL-EXTR-FFD-MEDIA-MIL-MY-SV-TAL](https://img.shields.io/static/v1?label=Hippocratic%20License&message=HL3-CL-EXTR-FFD-MEDIA-MIL-MY-SV-TAL&labelColor=5e2751&color=bc8c3d)](https://firstdonoharm.dev/version/3/0/cl-extr-ffd-media-mil-my-sv-tal.html)
- ESP32 Captive Portal (think airport wifi sign in page) example that works on all devices (or that's the goal).
+
+ESP32 Captive Portal (think airport wifi sign in page) example that works on all devices (or that's the goal).
 
 When you connect to the wifi "captive" password "12345678" it should take you straight to <http://4.3.2.1/> and display a green page with some simple text.
 
