@@ -20,8 +20,8 @@
 //Pre reading on the fundamentals of captive portals https://textslashplain.com/2022/06/24/captive-portals/
 
 const char * ssid = "captive"; //FYI The SSID can't have a space in it.
-const char * password = "12345678"; //Atleast 8 chars
-//const char * password = NULL; //uncomment for no password
+//const char * password = "12345678"; //Atleast 8 chars
+const char * password = NULL; // no password
 
 #define MAX_CLIENTS 4 //ESP32 supports up to 10 but I have not tested it yet
 #define WIFI_CHANNEL 6 //2.4ghz channel 6 https://en.wikipedia.org/wiki/List_of_WLAN_channels#2.4_GHz_(802.11b/g/n/ax)
