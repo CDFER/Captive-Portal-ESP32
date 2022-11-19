@@ -13,7 +13,7 @@ Flash: [==        ]  22.6% (used 711089 bytes from 3145728 bytes)
 - Lots of comments that explain how it all works
 
 ## 🖼️ User interface
-![User interface](/images/banner.jpeg)
+![User interface](/images/banner.jpg)
 
 ## 📲 Quickstart with ESP Home Flasher tool on Windows, MacOS and Linux
 
@@ -85,18 +85,11 @@ If you test this code on a device (even if it works) it would be really helpful 
 
 ## ✌️ Other
 
-Licensed under the 
-[![Hippocratic License HL3-CL-EXTR-FFD-MEDIA-MIL-MY-SV-TAL](https://img.shields.io/static/v1?label=Hippocratic%20License&message=HL3-CL-EXTR-FFD-MEDIA-MIL-MY-SV-TAL&labelColor=5e2751&color=bc8c3d)](https://firstdonoharm.dev/version/3/0/cl-extr-ffd-media-mil-my-sv-tal.html)
-
 This work was done as part of a project with Simon Ingram of Terrestrial Assemblages with the support of Govett-Brewster Art Gallery / Len Lye Centre
 
-Thanks to @me-no-dev (your libraries are awesome), @Aircoookie, @blazoncek, and everyone at @Espressif Systems for making a really awesome chip and porting it to arduino
+Thanks to @me-no-dev and everyone at @Espressif Systems for making a really awesome chip and porting it to arduino
 
-Thanks to @LTRTNZ for putting up with my never ending shit and @Vincent for helping me through this crazy year
-
-
-
-
+Thanks to @LTRTNZ and @vincentd123 for putting up with my never ending shit and @Vincent for helping me through this crazy year
 
 
 [^1]: devices from the last 10 years, or that's the goal of this project :)
