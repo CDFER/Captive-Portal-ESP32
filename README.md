@@ -82,6 +82,12 @@ If you test this code on a device (even if it works) it would be really helpful 
 - Support integrating the DHCP or IPv6 Router Advertisement (RA) options for Captive Portals on iOS 14+ and macOS Big Sur+ https://developer.apple.com/news/?id=q78sq5rv
 - Port https://github.com/Aircoookie/WLED-WebInstaller
 
+### My Reading List
+
+- https://www.linkedin.com/pulse/ios-7-captive-portal-guide-requirements-agathe-guib%C3%A9
+- https://developer.apple.com/news/?id=q78sq5rv
+- 
+
 
 ## ✌️ Other
 
