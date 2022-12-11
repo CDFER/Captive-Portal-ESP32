@@ -96,7 +96,7 @@ This work was done as part of a project with Simon Ingram of Terrestrial Assembl
 
 Thanks to @me-no-dev and everyone at @Espressif Systems for making a really awesome chip and porting it to arduino
 
-Thanks to @LTRTNZ and @vincentd123 for putting up with my never ending shit and @Vincent for helping me through this crazy year
+Thanks to @LTRTNZ for putting up with my never ending shit and @vincentd123 for helping me through this crazy year
 
 
 
