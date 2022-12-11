@@ -2,6 +2,7 @@
 
 [![Hippocratic License HL3-CL-EXTR-FFD-MEDIA-MIL-MY-SV-TAL](https://img.shields.io/static/v1?label=Hippocratic%20License&message=HL3-CL-EXTR-FFD-MEDIA-MIL-MY-SV-TAL&labelColor=5e2751&color=bc8c3d)](https://firstdonoharm.dev/version/3/0/cl-extr-ffd-media-mil-my-sv-tal.html)
 
+
 A ESP32 Captive Portal written in Arudino C++ (think airport wifi sign in page) demo that works on all devices[^1].
 
 ## ⚙️ Features
@@ -98,4 +99,7 @@ Thanks to @me-no-dev and everyone at @Espressif Systems for making a really awes
 Thanks to @LTRTNZ and @vincentd123 for putting up with my never ending shit and @Vincent for helping me through this crazy year
 
 
+
 [^1]: devices from the last 10 years, or that's the goal of this project :)
+
+Made with love by Chris Dirks (@cd_fer) in Aotearoa New Zealand
