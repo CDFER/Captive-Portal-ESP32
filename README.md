@@ -5,6 +5,10 @@
 
 A ESP32 Captive Portal written in Arudino C++ (think airport wifi sign in page) demo that works on all devices[^1].
 
+This code is an example of a captive portal for the ESP32, using the AsyncTCP library. The code sets up a soft access point with the given SSID and no password, and configures a DNS server to redirect all traffic to the captive portal web server running on the ESP32. The captive portal serves an HTML page with a message that all requests will be redirected to this page.
+
+The code also includes some workarounds and documents limitations for different devices and browsers, such as a workaround for Windows 11 captive portal, and limitations on the Safari (iOS) browser.
+
 ## ⚙️ Features
 ```
 RAM:   [=         ]  11.6% (used 37976 bytes from 327680 bytes)
@@ -39,22 +43,27 @@ If running Windows , you will most likely need a driver from here: <https://www.
 
 | Status | Version   | Connect | Popup | Serve Page | OS                      | Device Name         | Browser | Notes                |
 |--------|-----------|---------|-------|------------|-------------------------|---------------------|---------|----------------------|
-| ✅      | V0.3.0    | ✅       | ✅     | ✅          | Win 11 Home (22H2)      | XPS15 9550          | Firefox |                      |
-| ✅      | V0.3.0    | ✅       | ✅     | ✅          | Win 11 Home (22H2)      | XPS15 9550          | Chrome  |                      |
-| ❌      | V0.3.0    | ❌       | ✅     | ✅          | Android 11 (OxygenOS11) | Oneplus 6           | Default | Cellular must be off |
-| ✅      | V0.3.0    | ✅       | ✅     | ✅          | MacOSX (10.6.8)         | Macbook Air (2011)  | Safari  |                      |
-| ✅      | V0.3.0    | ✅       | ✅     | ✅          | Windows 7 Starter       | Toshiba NB200       | IE      |                      |
-| ✅      | V0.3.0    | ✅       | ✅     | ✅          | iOS 9 (9.3.5)           | iPad mini (2012)    | Default |                      |
-| ✅      | V0.3.0    | ✅       | ✅     | ✅          | Android 9 (OneUI1)      | Samsung A53         | Default |                      |
-| ✅      | V0.3.0    | ✅       | ✅     | ✅          | iOS 10 (10.3.3)         | iPhone 5c           | Default |                      |
-| ✅      | V0.2.0    | ✅       | ✅     | ✅          |                         | iPhone X            | Default | thx @SNERTTT         |
-| ✅      | V0.2.0    | ✅       | ✅     | ✅          |                         | Redmi Note 10       | Default | thx @SNERTTT         |
-| ✅      | V0.2.0    | ✅       | ✅     | ✅          | iOS 16                  | iPhone XR           | Default |                      |
-| ❌      | V0.2.0    | ✅       | ❌     | ✅          | MacOS Monterey (12.5.1) | Macbook Pro 16 2019 | Chrome  |                      |
-| ❌      | V0.2.0    | ✅       | ❌     | ✅          | MacOS Monterey (12.5.1) | Macbook Pro 16 2019 | Safari  |                      |
-| ✅      | V0.1      | ✅       | ✅     | ✅          | Win 10 Pro              | XPS15 9575          | Edge    |                      |
-| ✅      | V0.1      | ✅       | ✅     | ✅          | Win 10 Edu              | XPS15 9570          | Edge    |                      |
-| ✅      | V0.1      | ✅       | ✅     | ✅          | Android 12 (OneUI4.1)   | Samsung S20 FE 5G   | Default |                      |
+| ✅      | 0.5.0    | ✅       | ✅     | ✅          | Win 11 Home (22H2)      | 13600k Custom PC    | Firefox |                      |
+| ✅      | 0.5.0    | ✅       | ✅     | ✅          | Win 11 Home (22H2)      | 13600k Custom PC    | Chrome  |                      |
+| ❌      | 0.5.0    | ❌       | ✅     | ✅          | Android 11 (OxygenOS11) | Oneplus 6           | Default | Cellular must be off |
+| ✅      | 0.5.0    | ✅       | ✅     | ✅          | Android 9 (OneUI1)      | Samsung A53         | Default |                      |
+| ✅      | 0.5.0    | ✅       | ✅     | ✅          | Win 11 Home (22H2)      | XPS15 9550          | Firefox |                      |
+| ✅      | 0.5.0    | ✅       | ✅     | ✅          | Win 11 Home (22H2)      | XPS15 9550          | Chrome  |                      |
+| ✅      | 0.4.0    | ✅       | ✅     | ✅          | Ubuntu 22.04            | Hp Pavilion PC      |         |                      |
+| ✅      | 0.4.0    | ✅       | ✅     | ✅          | iOS 16.2                | iphone X            |         |                      |
+| ✅      | 0.4.0    | ✅       | ✅     | ✅          | android 12              | Galaxy Tab A7 lite  |         |                      |
+| ✅      | 0.3.0    | ✅       | ❌     | ✅          | MacOSX (10.6.8)         | Macbook Air (2011)  | Safari  |                      |
+| ✅      | 0.3.0    | ✅       | ❌     | ✅          | Windows 7 Starter       | Toshiba NB200       | IE      |                      |
+| ✅      | 0.3.0    | ✅       | ✅     | ✅          | iOS 9 (9.3.5)           | iPad mini (2012)    | Default |                      |
+| ✅      | 0.3.0    | ✅       | ✅     | ✅          | iOS 10 (10.3.3)         | iPhone 5c           | Default |                      |
+| ✅      | 0.2.0    | ✅       | ✅     | ✅          |                         | iPhone X            | Default | thx @SNERTTT         |
+| ✅      | 0.2.0    | ✅       | ✅     | ✅          |                         | Redmi Note 10       | Default | thx @SNERTTT         |
+| ✅      | 0.2.0    | ✅       | ✅     | ✅          | iOS 16                  | iPhone XR           | Default |                      |
+| ❌      | 0.2.0    | ✅       | ❌     | ✅          | MacOS Monterey (12.5.1) | Macbook Pro 16 2019 | Chrome  |                      |
+| ❌      | 0.2.0    | ✅       | ❌     | ✅          | MacOS Monterey (12.5.1) | Macbook Pro 16 2019 | Safari  |                      |
+| ✅      | 0.1.0    | ✅       | ✅     | ✅          | Win 10 Pro              | XPS15 9575          | Edge    |                      |
+| ✅      | 0.1.0    | ✅       | ✅     | ✅          | Win 10 Edu              | XPS15 9570          | Edge    |                      |
+| ✅      | 0.1.0    | ✅       | ✅     | ✅          | Android 12 (OneUI4.1)   | Samsung S20 FE 5G   | Default |                      |
 
 ### Did it work?
 
@@ -82,6 +91,7 @@ If you test this code on a device (even if it works) it would be really helpful 
 - Set client DHCP IP address range in private space (currently clients must accept DHCP Server Range: 4.3.2.2 to 4.3.2.12)
 - Support integrating the DHCP or IPv6 Router Advertisement (RA) options for Captive Portals on iOS 14+ and macOS Big Sur+ https://developer.apple.com/news/?id=q78sq5rv
 - Port https://github.com/Aircoookie/WLED-WebInstaller
+- RCF 7710 DHCP option for captive portal detection (https://github.com/CDFER/Captive-Portal-ESP32/issues/5)
 
 ### My Reading List
 
@@ -91,6 +101,7 @@ If you test this code on a device (even if it works) it would be really helpful 
 
 
 ## ✌️ Other
+To support this and my future work you can now purchase one of my own handmade CO2 sensors through my website: https://www.keastudios.co.nz
 
 This work was done as part of a project with Simon Ingram of Terrestrial Assemblages with the support of Govett-Brewster Art Gallery / Len Lye Centre
 
