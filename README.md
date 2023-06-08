@@ -43,9 +43,7 @@ If you are running Windows, you will most likely need a driver from [here](https
 ## Testing Status
 
 | Status | Version | Connect | Popup | Serve Page | OS                     | Device Name        | Browser | Notes                 |
-|--------|---------|---------|-------|------------|------------------------|--------------------|---------
-
-|-----------------------|
+|--------|---------|---------|-------|------------|------------------------|--------------------|---------|-----------------------|
 | ✅      | 0.5.0   | ✅       | ✅     | ✅          | Win 11 Home (22H2)     | 13600k Custom PC   | Firefox |                       |
 | ✅      | 0.5.0   | ✅       | ✅     | ✅          | Win 11 Home (22H2)     | 13600k Custom PC   | Chrome  |                       |
 | ❌      | 0.5.0   | ❌       | ✅     | ✅          | Android 11 (OxygenOS11) | OnePlus 6          | Default | Cellular must be off  |
